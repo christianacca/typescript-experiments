@@ -1,0 +1,34 @@
+{
+  "name": "typescript-experiments",
+  "version": "1.0.0",
+  "description": "A place to save experiments and small design proofs written in typescript.",
+  "scripts": {
+    "clean": "shx rm -rf build",
+    "test": "karma start",
+    "test:debug": "karma start --no-single-run",
+    "test:w": "karma start --no-single-run --auto-watch",
+    "pretsc": "npm run clean",
+    "tsc": "tsc",
+    "tsc:w": "npm run tsc -- --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jasmine": "^2.5.40",
+    "@types/karma-jasmine": "0.0.28",
+    "awesome-typescript-loader": "^3.0.0-beta.9",
+    "jasmine": "^2.5.2",
+    "jasmine-spec-reporter": "^2.7.0",
+    "karma": "^1.3.0",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-jasmine": "^1.1.0",
+    "karma-jasmine-diff-reporter": "^0.6.3",
+    "karma-phantomjs-launcher": "^1.0.2",
+    "karma-spec-reporter": "0.0.26",
+    "karma-webpack": "^1.8.0",
+    "shx": "^0.2.1",
+    "typescript": "^2.1.4",
+    "webpack": "^2.1.0-beta.28"
+  }
+}
