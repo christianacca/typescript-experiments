@@ -1,9 +1,9 @@
 import { createMixin } from '../create-mixin';
-import { Person, PersonCtorData } from './person';
+import { Person, PersonData } from './person';
 import { Selectable, SelectableCtorData } from './selectable';
 
 interface SelectablePersonCtor {
-    new(data: PersonCtorData & SelectableCtorData): SelectablePerson
+    new(data: PersonData & SelectableCtorData): SelectablePerson
 }
 
 let SelectablePerson = createMixin<Person, Selectable, SelectablePersonCtor>(Person, Selectable);

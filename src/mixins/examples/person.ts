@@ -1,6 +1,6 @@
 import { Selectable } from './selectable';
 
-interface PersonDataWithDefault {
+interface PersonDataDefault {
     age: number;
 }
 interface PersonDataNoDefault {
@@ -8,13 +8,13 @@ interface PersonDataNoDefault {
     lastName: string;
 }
 
-export type PersonCtorData = Partial<PersonDataWithDefault> & PersonDataNoDefault;
+export type PersonData = Partial<PersonDataDefault> & PersonDataNoDefault;
 
-export class Person implements PersonDataWithDefault, PersonDataNoDefault {
+export class Person implements PersonDataDefault, PersonDataNoDefault {
     age: number;
     firstName: string;
     lastName: string;
-    constructor(data: PersonCtorData) {
+    constructor(data: PersonData) {
         Object.assign(this, data);
         // assign missing defaults
         this.age = data.age == null ? 0: data.age;
